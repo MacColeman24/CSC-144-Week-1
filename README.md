@@ -24,7 +24,11 @@ The vector classes come with accessors and mutators for every component of the v
 ## Matrices
 
 ### Supported operations:
+- **Identitity matrices:** multiplicative identity matrices.
 - **Addition:** matrices of the same order can be added to produce a new matrix.
 - **Subtraction:** matrices of the same order can be subtracted to produce a new matrix.
-- **Multiplication:** multiplication has yet to be implemented.
-- **Division:** division has yet to be implemented.
+- **Scalar multiplication:** multiply a matrix by a scalar.
+- **Scalar division:** divide a matrix by a scalar.
+- **Matrix multiplication:** multiplication of two matrices.
+- **Determinant:** determinant of matrices.
+- **Trace:** the trace of matrices.

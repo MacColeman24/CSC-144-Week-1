@@ -26,9 +26,26 @@ public class WeekOne {
         
         SquareMatrix2 c = new SquareMatrix2(0, 1, 2, 3);
         SquareMatrix2 d = new SquareMatrix2(10, 6, 2, 9);
-        System.out.println(c);
-        System.out.println(d);
+        SquareMatrix2 i = SquareMatrix2.identity();
+        
+        System.out.println("C:\n" + c);
+        System.out.println("D:\n" + d);
+        System.out.println("I:\n" + i);
         System.out.println(c.add(d));
+        
+        System.out.println(c.multiply(i));
+        System.out.println(d.multiply(i));
+        System.out.println(c.multiply(d));
+        
+        System.out.println("Determinants!:");
+        System.out.println("C: " + c.determinant());
+        System.out.println("D: " + d.determinant());
+        System.out.println("I: " + i.determinant());
+        
+        System.out.println("Traces!:");
+        System.out.println("C: " + c.trace());
+        System.out.println("D: " + d.trace());
+        System.out.println("I: " + i.trace());
     }
     
 }
