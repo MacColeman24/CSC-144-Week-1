@@ -84,8 +84,6 @@ public class SquareMatrix2 {
             double valueAtCell = 0;
             double[] row = this.getRow(i / 2);
             double[] col = other.getColumn(i % 2);
-            System.out.println("Processing "  + row[0] + " " + row[1]);
-            System.out.println("And "  + col[0] + " " + col[1]);
             for(int j = 0; j < 2; j++) {
                 valueAtCell += row[j] * col[j];
             }
