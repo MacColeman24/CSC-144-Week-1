@@ -51,9 +51,16 @@ public class Vector2 {
         return new Vector2(this.getX()/this.magnitude(), this.getY()/this.magnitude());
     }
     
-    public Vector2 add(Vector3 a) {
+    public Vector2 add(Vector2 a) {
         double cx = this.getX() + a.getX();
         double cy = this.getY() + a.getY();
+        
+        return new Vector2(cx, cy);
+    }
+    
+    public Vector2 subtract(Vector2 other) {
+        double cx = this.x - other.x;
+        double cy = this.y - other.y;
         
         return new Vector2(cx, cy);
     }
@@ -65,17 +72,24 @@ public class Vector2 {
         return new Vector2(cx, cy);
     }
     
-    public static double dotProduct(Vector2 a, Vector2 b) {
-        return a.getX() * b.getX() + a.getY() * b.getY();
-    }
-    
-    public static Vector3 crossProduct(Vector2 a, Vector2 b) {
+    public Vector2 divide(double a) {
+        double cx = this.getX() / a;
+        double cy = this.getY() / a;
         
-        return new Vector3(0, 0, pseudoscalarCrossProduct(a, b));
+        return new Vector2(cx, cy);
     }
     
-    public static double pseudoscalarCrossProduct(Vector2 a, Vector2 b) {
-        return a.getX() * b.getY() - a.getY() * b.getX();
+    public double dotProduct(Vector2 other) {
+        return this.x * other.x + this.y * other.y;
+    }
+    
+    public Vector3 crossProduct(Vector2 other) {
+        
+        return new Vector3(0, 0, this.pseudoscalarCrossProduct(other));
+    }
+    
+    public double pseudoscalarCrossProduct(Vector2 other) {
+        return this.x * other.y - this.y * other.x;
     }
     
     public String toString() {

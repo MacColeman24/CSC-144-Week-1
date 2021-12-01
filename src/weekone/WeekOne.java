@@ -17,12 +17,17 @@ public class WeekOne {
         // TODO code application logic here
         System.out.println("Vector testing:");
         
-        Vector3 a = new Vector3(10, 0, 0);
-        Vector3 b = new Vector3(0, -15, 0);
+        HomogeneousVector a = new HomogeneousVector(10, 0);
+        HomogeneousVector b = new HomogeneousVector(0, -15);
         System.out.println(a);
         System.out.println(b);
-        System.out.println("Dot product: " + Vector3.dotProduct(a, b));
-        System.out.println("Cross product: " + Vector3.crossProduct(a, b));
+        System.out.println("Dot product: " + a.dotProduct(b));
+        System.out.println("Cross product: " + a.crossProduct(b));
+        
+        System.out.println("Addition: " + a.add(b));
+        System.out.println("Subtraction: " + a.subtract(b));
+        System.out.println("Multiply: " + a.multiply(5.0));
+        System.out.println("Divide: " + a.divide(5.0));
         
         SquareMatrix2 c = new SquareMatrix2(0, 1, 2, 3);
         SquareMatrix2 d = new SquareMatrix2(10, 6, 2, 9);
